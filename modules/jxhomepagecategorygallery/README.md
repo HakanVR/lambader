@@ -1,0 +1,1 @@
+# JX Homepage Category Gallery

@@ -1,0 +1,24 @@
+.jxhomepagecategorygallery-block {
+	position:relative;
+	z-index:1;
+	width:100%;
+	clear:both;	
+}
+.jxhomepagecategorygallery-block #jxhomepagecategorygallery-nav {
+	position:absolute;
+	z-index:1;
+	top:0;
+	right:15px;
+}
+#jxhomepagecategorygallery-nav > li.current-item > a, #jxhomepagecategorygallery-nav > li > a:hover {
+	color:#f00;	
+}
+#jxhomepagecategorygallery > li {
+	position:relative;
+	z-index:1;	
+}
+#jxhomepagecategorygallery > li .jxhomepagecategorygallery-content {
+	position:absolute;
+	left:0;
+	top:0;
+}

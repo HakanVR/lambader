@@ -1,0 +1,225 @@
+#jxsearchblock {
+  position: relative;
+  padding-top: 42px;
+}
+#jxsearchblock #jxsearchbox {
+  width: 100%;
+  border: 1px solid #d6d4d4;
+  position: relative;
+  background: #fbfbfb;
+  padding-right: 50px;
+  padding-left: 200px;
+}
+@media (max-width: 479px) {
+  #jxsearchblock #jxsearchbox {
+    padding-left: 140px;
+  }
+}
+#jxsearchblock #jxsearchbox label {
+  color: #333333;
+}
+#jxsearchblock .btn.button-search {
+  background: #333333;
+  display: block;
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  border: none;
+  color: white;
+  width: 50px;
+  text-align: center;
+  padding: 10px 0 11px 0;
+}
+#jxsearchblock .btn.button-search:before {
+  content: "\E8B6";
+  display: block;
+  font-family: "Material Icons";
+  font-size: 17px;
+  width: 100%;
+  text-align: center;
+}
+#jxsearchblock .btn.button-search:hover {
+  color: #6f6f6f;
+}
+#jxsearchblock .btn.button-search span {
+  display: none;
+}
+#jxsearchblock .selector {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+#jxsearchblock select {
+  width: 180px;
+}
+@media (max-width: 479px) {
+  #jxsearchblock select {
+    width: 120px;
+  }
+}
+#jxsearchblock select option {
+  padding: 5px;
+}
+#jxsearchblock #jx_search_query {
+  display: inline-block;
+  padding: 12px 10px 9px 13px;
+  height: 43px;
+  border: none;
+  border-left: 1px solid #d6d4d4;
+  background: none;
+  box-shadow: none;
+}
+#jxsearchblock #jxsearch_result {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background: #fbfbfb;
+  width: 100%;
+  z-index: 5;
+  padding: 15px;
+  border-top: 5px solid #f7f7f7;
+}
+#jxsearchblock #jxsearch_result .search-page {
+  overflow: hidden;
+  clear: both;
+}
+#jxsearchblock #jxsearch_result .jxsearch-row {
+  padding: 15px;
+  margin-top: 30px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+#jxsearchblock #jxsearch_result .jxsearch-row .jxsearch-inner-row {
+  position: relative;
+}
+#jxsearchblock #jxsearch_result .jxsearch-row .jxsearch-inner-row img {
+  margin-right: 15px;
+  background: #ffffff;
+  float: left;
+}
+#jxsearchblock #jxsearch_result .jxsearch-row:first-child {
+  margin: 0;
+}
+#jxsearchblock #jxsearch_result .jxsearch-row:hover {
+  background: #f7f7f7;
+}
+#jxsearchblock #jxsearch_result .reference, #jxsearchblock #jxsearch_result .quantity, #jxsearchblock #jxsearch_result .availability {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 15px 0 0;
+  font-size: 12px;
+}
+#jxsearchblock #jxsearch_result .reference.availability, #jxsearchblock #jxsearch_result .quantity.availability, #jxsearchblock #jxsearch_result .availability.availability {
+  text-decoration: underline;
+}
+#jxsearchblock #jxsearch_result .reference.quantity, #jxsearchblock #jxsearch_result .quantity.quantity, #jxsearchblock #jxsearch_result .availability.quantity {
+  color: #ccc;
+}
+#jxsearchblock #jxsearch_result .name {
+  display: block;
+  font-size: 15px;
+  line-height: 21px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+#jxsearchblock #jxsearch_result .name strong {
+  color: black;
+}
+#jxsearchblock #jxsearch_result .price {
+  color: #333;
+  font-size: 13px;
+  font-weight: bold;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+#jxsearchblock #jxsearch_result .price.new-price {
+  color: red;
+}
+#jxsearchblock #jxsearch_result .description-short {
+  margin-bottom: 10px;
+}
+#jxsearchblock #jxsearch_result div > strong {
+  font-weight: normal;
+  color: black;
+}
+#jxsearchblock #jxsearch_result .manufacturer-name, #jxsearchblock #jxsearch_result .supplier-name {
+  float: right;
+  margin-left: 20px;
+  display: block;
+  background: #ffffff;
+  padding: 3px 7px;
+  font-size: 11px;
+  line-height: 15px;
+}
+#jxsearchblock #jxsearch_result.loading {
+  opacity: 0.5;
+}
+#jxsearchblock #jxsearch_result div.hidden-row, #jxsearchblock #jxsearch_result div.hidden-page {
+  display: none;
+}
+#jxsearchblock #jxsearch_result .pagers {
+  float: right;
+  padding-top: 15px;
+}
+#jxsearchblock #jxsearch_result .pagers a {
+  background: #f7f7f7;
+  padding: 5px 10px;
+  margin: 0 3px;
+  display: inline-block;
+  text-decoration: none;
+}
+#jxsearchblock #jxsearch_result .pagers a:hover, #jxsearchblock #jxsearch_result .pagers a.active, #jxsearchblock #jxsearch_result .pagers a:focus {
+  background: #f1f0f0;
+  color: #000;
+  outline: none;
+}
+#jxsearchblock #jxsearch_result .navigation {
+  float: right;
+  padding-top: 15px;
+}
+#jxsearchblock #jxsearch_result .navigation.top {
+  padding-top: 0;
+  padding-bottom: 15px;
+}
+#jxsearchblock #jxsearch_result .navigation > a {
+  float: left;
+  font-size: 24px;
+  padding: 2px 0;
+  text-decoration: none;
+}
+#jxsearchblock #jxsearch_result .navigation > a.disabled {
+  cursor: default;
+  color: #cccccc;
+}
+#jxsearchblock #jxsearch_result .navigation > a:hover, #jxsearchblock #jxsearch_result .navigation > a.active, #jxsearchblock #jxsearch_result .navigation > a:focus {
+  outline: none;
+}
+#jxsearchblock #jxsearch_result .navigation .pagers {
+  float: left;
+  padding-top: 0;
+}
+#jxsearchblock #jxsearch_result .navigation .count-pages {
+  float: left;
+  font-size: 17px;
+  padding: 5px 10px;
+}
+#jxsearchblock #jxsearch_result .navigation .count-pages .current {
+  color: #000000;
+}
+#jxsearchblock #jxsearch_result .jxsearch-alllink {
+  padding-top: 20px;
+  float: left;
+}
+#jxsearchblock #jxsearch_result .jxsearch-alllink a {
+  display: block;
+}
+#jxsearchblock #jxsearch_result .jxsearch-alllink a:after {
+  font-family: "Material Icons";
+  content: '\E5D5';
+  font-size: 24px;
+  margin-left: 10px;
+  vertical-align: -4px;
+  color: #85ce90;
+}

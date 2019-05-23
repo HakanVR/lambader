@@ -1,0 +1,83 @@
+@mixin search-box {
+  form {
+    position: relative;
+    input[type=text] {
+      &:focus {
+        outline: 3px $brand-primary solid;
+        color: $gray-darker;
+        background: white;
+        + button .search {
+          color: $brand-primary;
+        }
+      }
+      border: none;
+      padding: 10px;
+      min-width: 255px;
+      color: $gray;
+      border: $input-btn-border-width solid $input-border-color;
+    }
+    button[type=submit] {
+      position: absolute;
+      background: none;
+      border: none;
+      bottom: 4px;
+      right: 2px;
+      color: $gray;
+      .search:hover {
+        color: $brand-primary;
+      }
+    }
+  }
+}
+
+@mixin box-shadow {
+  box-shadow: 2px 2px 15px rgba($gray-darker, 0.2);
+}
+
+@mixin box-shadow-light {
+  box-shadow: 1px 1px 10px rgba($gray, 0.1);
+}
+
+
+@mixin addMaterialIcon($content, $font-size: inherit) {
+  font-family: 'Material Icons';
+  content: $content;
+  display: inline-block;
+  font-weight: normal;
+  font-style: normal;
+  font-size: $font-size;
+}
+
+
+@mixin addFlIcon($content) {
+  font-family: "fl-line-icon-set";
+  content: $content;
+  display: inline-block;
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@mixin centerer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin on-event($self: false) {
+  @if $self {
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  } @else {
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  }
+}

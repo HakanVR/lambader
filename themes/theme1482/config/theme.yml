@@ -1,0 +1,444 @@
+name: theme1482
+display_name: theme1482
+version: 1.0.0
+author:
+  name: Jetimpex
+  email:
+  url: https://www.jetimpex.com
+meta:
+  compatibility:
+    from: 1.7.0.0
+    to: 1.7.2.4
+  available_layouts:
+    layout-full-width:
+      name: Full Width
+      description: No side columns, ideal for distraction-free pages such as product pages.
+    layout-both-columns:
+      name: Three Columns
+      description: One large central column and 2 side columns.
+    layout-left-column:
+      name: Two Columns, small left column
+      description: Two columns with a small left column
+    layout-right-column:
+      name: Two Columns, small right column
+      description: Two columns with a small right column
+
+global_settings:
+  configuration:
+    PS_IMAGE_QUALITY: png
+  modules:
+    to_enable:
+      - gamification
+      - jxcategoryproducts
+      - jxheaderaccount
+      - jxhomepagecategorygallery
+      - jxhtmlcontent
+      - jxmediaparallax
+      - jxmegamenu
+      - jxsearch
+      - jxwishlist
+      - ps_bestsellers
+      - ps_crossselling
+      - ps_viewedproduct
+      - sampledatainstall
+  hooks:
+    modules_to_hook:
+      actionAdminControllerSetMedia:
+        - dashactivity
+        - dashtrends
+        - dashgoals
+        - graphnvd3
+      actionAdminCurrenciesControllerSaveAfter:
+        - ps_currencyselector
+      actionAdminGroupsControllerSaveAfter:
+        - ps_featuredproducts
+      actionAdminMetaControllerUpdate_optionsAfter:
+        - gamification
+      actionAdminPerformanceControllerSaveAfter:
+        - gamification
+      actionAdminPreferencesControllerUpdate_optionsAfter:
+        - gamification
+      actionAdminStoresControllerSaveAfter:
+        - gamification
+      actionAdminStoresControllerUpdate_optionsAfter:
+        - ps_contactinfo
+        - gamification
+      actionAdminThemesControllerUpdate_optionsAfter:
+        - gamification
+      actionAdminWebserviceControllerSaveAfter:
+        - gamification
+      actionAttributeDelete:
+        - ps_facetedsearch
+      actionAttributeGroupDelete:
+        - ps_facetedsearch
+      actionAttributeGroupSave:
+        - ps_facetedsearch
+      actionAttributePostProcess:
+        - ps_facetedsearch
+      actionAttributeSave:
+        - ps_facetedsearch
+      actionAuthentication:
+        - statsdata
+      actionCategoryAdd:
+        - ps_facetedsearch
+      actionCategoryDelete:
+        - ps_facetedsearch
+        - jxhomepagecategorygallery
+        - jxcategoryproducts
+      actionCategoryUpdate:
+        - ps_facetedsearch
+        - ps_featuredproducts
+        - ps_mainmenu
+        - jxmegamenu
+        - jxcategoryproducts
+      actionCustomerAccountAdd:
+        - ps_emailsubscription
+        - statsdata
+      actionFeatureDelete:
+        - ps_facetedsearch
+      actionFeatureSave:
+        - ps_facetedsearch
+      actionFeatureValueDelete:
+        - ps_facetedsearch
+      actionFeatureValueSave:
+        - ps_facetedsearch
+      actionModuleInstallAfter:
+        - gamification
+      actionModuleRegisterHookAfter:
+        - ps_customeraccountlinks
+      actionModuleUnRegisterHookAfter:
+        - ps_customeraccountlinks
+      actionObjectCarrierAddAfter:
+        - gamification
+      actionObjectCartAddAfter:
+        - gamification
+      actionObjectCartRuleAddAfter:
+        - gamification
+      actionObjectCategoryAddAfter:
+        - ps_mainmenu
+        - jxmegamenu
+      actionObjectCategoryDeleteAfter:
+        - ps_mainmenu
+        - jxmegamenu
+      actionObjectCategoryUpdateAfter:
+        - ps_mainmenu
+        - jxmegamenu
+      actionObjectCmsAddAfter:
+        - ps_mainmenu
+        - gamification
+        - jxmegamenu
+      actionObjectCmsDeleteAfter:
+        - ps_mainmenu
+        - jxmegamenu
+      actionObjectCmsUpdateAfter:
+        - ps_mainmenu
+        - jxmegamenu
+      actionObjectContactAddAfter:
+        - gamification
+      actionObjectCustomerAddAfter:
+        - dashactivity
+        - gamification
+      actionObjectCustomerMessageAddAfter:
+        - dashactivity
+      actionObjectCustomerThreadAddAfter:
+        - dashactivity
+        - gamification
+      actionObjectEmployeeAddAfter:
+        - gamification
+      actionObjectImageAddAfter:
+        - gamification
+      actionObjectLanguageAddAfter:
+        - ps_banner
+        - jxhtmlcontent
+        - jxmediaparallax
+      actionObjectManufacturerAddAfter:
+        - ps_mainmenu
+        - jxmegamenu
+      actionObjectManufacturerDeleteAfter:
+        - ps_mainmenu
+        - jxmegamenu
+      actionObjectManufacturerUpdateAfter:
+        - ps_mainmenu
+        - jxmegamenu
+      actionObjectOrderAddAfter:
+        - dashactivity
+        - dashproducts
+        - gamification
+      actionObjectOrderReturnAddAfter:
+        - dashactivity
+      actionObjectProductAddAfter:
+        - ps_mainmenu
+        - gamification
+        - jxmegamenu
+      actionObjectProductDeleteAfter:
+        - ps_mainmenu
+        - jxmegamenu
+        - ps_viewedproduct
+      actionObjectProductUpdateAfter:
+        - ps_mainmenu
+        - jxmegamenu
+        - ps_viewedproduct
+      actionObjectShopAddAfter:
+        - gamification
+      actionObjectShopGroupAddAfter:
+        - gamification
+      actionObjectShopUpdateAfter:
+        - gamification
+      actionObjectSupplierAddAfter:
+        - ps_mainmenu
+        - jxmegamenu
+      actionObjectSupplierDeleteAfter:
+        - ps_mainmenu
+        - jxmegamenu
+      actionObjectSupplierUpdateAfter:
+        - ps_mainmenu
+        - jxmegamenu
+      actionOrderStatusPostUpdate:
+        - dashtrends
+        - ps_bestsellers
+        - ps_crossselling
+      actionOrderStatusUpdate:
+        - gamification
+      actionProductAdd:
+        - ps_featuredproducts
+        - ps_bestsellers
+        - jxcategoryproducts
+      actionProductDelete:
+        - ps_featuredproducts
+        - ps_bestsellers
+        - jxcategoryproducts
+      actionProductSave:
+        - ps_facetedsearch
+      actionProductUpdate:
+        - ps_featuredproducts
+        - ps_bestsellers
+        - jxcategoryproducts
+      actionSearch:
+        - dashproducts
+      actionShopDataDuplication:
+        - ps_imageslider
+        - ps_mainmenu
+      actionUpdateLangAfter:
+        - ps_linklist
+        - blockreassurance
+      actionValidateOrder:
+        - gamification
+      additionalCustomerFormFields:
+        - ps_emailsubscription
+      dashboardData:
+        - dashactivity
+        - dashtrends
+        - dashgoals
+        - dashproducts
+      dashboardZoneOne:
+        - dashactivity
+      dashboardZoneTwo:
+        - dashtrends
+        - dashgoals
+        - dashproducts
+      displayAdminAfterHeader:
+        - welcome
+      displayAdminNavBarBeforeEnd:
+        - welcome
+      displayAdminStatsGraphEngine:
+        - graphnvd3
+      displayAdminStatsGridEngine:
+        - gridhtml
+      displayAdminStatsModules:
+        - pagesnotfound
+        - sekeywords
+        - statsbestcategories
+        - statsbestcustomers
+        - statsbestproducts
+        - statsbestsuppliers
+        - statsbestvouchers
+        - statscarrier
+        - statscatalog
+        - statscheckup
+        - statsequipment
+        - statsforecast
+        - statslive
+        - statsnewsletter
+        - statsorigin
+        - statspersonalinfos
+        - statsproduct
+        - statsregistrations
+        - statssales
+        - statssearch
+        - statsstock
+        - statsvisits
+        - jxwishlist
+      displayBackOfficeHeader:
+        - welcome
+        - gamification
+        - jxmegamenu
+        - jxhtmlcontent
+        - jxsearch
+        - jxhomepagecategorygallery
+        - jxwishlist
+        - jxmediaparallax
+        - sampledatainstall
+        - jxcategoryproducts
+        - jxheaderaccount
+      displayBeforeBodyClosingTag:
+        - statsdata
+        - jxmegamenu
+        - jxwishlist
+        - jxmediaparallax
+        - jxcategoryproducts
+      displayCrossSellingShoppingCart:
+        - ps_featuredproducts
+      displayCustomerAccount:
+        - jxwishlist
+        - jxheaderaccount
+      displayCustomerAccountFormTop:
+        - jxheaderaccount
+      displayFooter:
+        - ps_linklist
+        - ps_customeraccountlinks
+        - jxhtmlcontent
+        - ps_socialfollow
+      displayFooterBefore:
+        - ps_emailsubscription
+      displayFooterProduct:
+        - ps_crossselling
+        - ps_viewedproduct
+      displayHeaderLoginButtons:
+        - jxheaderaccount
+      displayHome:
+        - jxhomepagecategorygallery
+        - jxcategoryproducts
+        - jxhtmlcontent
+      displayLeftColumn:
+        - ps_categorytree
+        - ps_facetedsearch
+        - jxhtmlcontent
+      displayMyAccountBlock:
+        - jxwishlist
+      displayNav1:
+        - jxhtmlcontent
+      displayNav2:
+        - ps_socialfollow
+      displayNavFullWidth:
+        - ps_languageselector
+        - ps_currencyselector
+        - ps_shoppingcart
+        - ps_customtext
+        - ps_linklist
+        - jxheaderaccount
+      displayOrderConfirmation2:
+        - ps_featuredproducts
+      displayPaymentReturn:
+        - ps_checkpayment
+        - ps_wirepayment
+      displayProductAdditionalInfo:
+        - ps_sharebuttons
+        - jxwishlist
+      displayProductListFunctionalButtons:
+        - jxwishlist
+      displayReassurance:
+        - blockreassurance
+      displayRightColumn:
+        - jxhtmlcontent
+        - jxheaderaccount
+      displaySearch:
+        - ps_searchbar
+      displaySocialLoginButtons:
+        - jxheaderaccount
+      displayTop:
+        - jxmegamenu
+        - jxhtmlcontent
+        - jxsearch
+      displayTopColumn:
+        - jxhtmlcontent
+        - ps_imageslider
+      Header:
+        - ps_imageslider
+        - ps_searchbar
+        - ps_shoppingcart
+        - jxmegamenu
+        - jxhtmlcontent
+        - jxsearch
+        - jxhomepagecategorygallery
+        - jxwishlist
+        - jxmediaparallax
+        - jxcategoryproducts
+        - jxheaderaccount
+      moduleRoutes:
+        - jxsearch
+        - jxwishlist
+      paymentOptions:
+        - ps_checkpayment
+        - ps_wirepayment
+      productSearchProvider:
+        - ps_facetedsearch
+      search:
+        - statssearch
+  image_types:
+    cart_default:
+      width: 125
+      height: 125
+      scope:
+        - products
+    category_default:
+      width: 536
+      height: 536
+      scope:
+        - categories
+    home_default:
+      width: 400
+      height: 400
+      scope:
+        - products
+    large_default:
+      width: 1000
+      height: 1000
+      scope:
+        - products
+        - manufacturers
+        - suppliers
+    medium_default:
+      width: 452
+      height: 452
+      scope:
+        - products
+        - manufacturers
+        - suppliers
+    small_default:
+      width: 98
+      height: 98
+      scope:
+        - products
+        - categories
+        - manufacturers
+        - suppliers
+    stores_default:
+      width: 170
+      height: 115
+      scope:
+        - stores
+
+theme_settings:
+  default_layout: layout-full-width
+  layouts:
+    category: layout-left-column
+    best-sales: layout-left-column
+    new-products: layout-left-column
+    prices-drop: layout-left-column
+    contact: layout-left-column
+
+dependencies:
+  modules:
+    - gamification
+    - jxcategoryproducts
+    - jxheaderaccount
+    - jxhomepagecategorygallery
+    - jxhtmlcontent
+    - jxmediaparallax
+    - jxmegamenu
+    - jxsearch
+    - jxwishlist
+    - ps_bestsellers
+    - ps_crossselling
+    - ps_viewedproduct
+    - sampledatainstall

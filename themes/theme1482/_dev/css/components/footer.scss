@@ -1,0 +1,293 @@
+.block_newsletter {
+  font-size: $font-size-sm;
+  text-align: center;
+  h3 {
+    color: $white;
+    font-family: $font-custom;
+    font-size: 30px;
+    font-weight: 900;
+    > span {
+      font-weight: 400;
+    }
+    margin-bottom: 17px;
+  }
+  p:not(.alert) {
+    padding-top: $small-space;
+    color: $white;
+    margin-bottom: 25px;
+  }
+  
+  form {
+    max-width: 401px;
+    margin-left: auto;
+    margin-right: auto;
+    .input-wrapper {
+      overflow: hidden;
+      input {
+        height: 50px;
+        outline: none;
+        border: none;
+        box-shadow: none;
+        text-align: center;
+      }
+    }
+
+    input[type=text] {
+      padding: 11px;
+
+      &:focus {
+        border: 3px $brand-primary solid;
+        padding: 8px 8px 9px;
+        outline: 0;
+      }
+      width: 100%;
+    }
+    input {
+      height: 50px;
+    }
+
+    .btn {
+      margin-top: 18px;
+    }
+  }
+  margin-bottom: 20px;
+}
+
+.block-contact {
+  color: $gray-darker;
+  .block-contact-title {
+    color: $gray-darker;
+  }
+}
+
+.block-social {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 15px;
+
+  ul {
+    overflow: hidden;
+    margin: 0;
+    li {
+      display: inline-block;
+      vertical-align: middle;
+      width: 24px;
+      height: 30px;
+      text-align: center;
+      margin-right: 17px;
+      line-height: 30px;
+      &:last-child {
+        margin-right: 0;
+      }
+      a {
+        transition: all 0.3s ease;
+        font-size: 0;
+        line-height: 1;
+        color: $gray-lighter;
+        &:before {
+          color: $gray-lighter;
+        }
+        &:hover {
+          &:before {
+            color: $gray-darker;
+          }
+        }
+      }
+    }
+  }
+
+  h4 {
+    display: none;
+  }
+}
+
+.facebook,
+.twitter,
+.rss,
+.youtube,
+.googleplus,
+.pinterest,
+.vimeo,
+.instagram {
+  background-image: none;
+  > a, > span {
+    color: $gray-lighter;
+    font-size: 0;
+    background-image: none;
+    display: inline-block;
+    vertical-align: middle;
+    &:before {
+      font-family: "FontAwesome";
+      display: inline-block;
+      font-weight: normal;
+      font-size: 16px;
+    }
+  }
+  &.icon-gray {
+    > a {
+      color: $gray;
+    }
+  }
+}
+
+.facebook {
+  > a, > span {
+    &::before {
+      content: "\f09a";
+    }
+  }
+}
+
+.twitter {
+  > a, > span {
+    &::before {
+      content: "\f099";
+    }
+  }
+}
+
+.rss {
+  > a, > span {
+    &:before {
+      content: "\f09e";
+    }
+  }
+}
+
+.youtube {
+  > a, > span {
+    &:before {
+      content: "\f167";
+    }
+  }
+}
+
+.googleplus {
+  > a, > span {
+    &::before {
+      content: "\f0d5";
+    }
+  }
+}
+
+.pinterest {
+  > a, > span {
+    &::before {
+      content: "\f0d2";
+    }
+  }
+}
+
+.vimeo {
+  > a, > span {
+    &::before {
+      content: "\f27d";
+    }
+  }
+}
+
+.instagram {
+  > a, > span {
+    &::before {
+      content: "\f16d";
+    }
+  }
+}
+
+#footer {
+  .block-social {
+    text-align: center;
+    margin-top: 25px;
+  }
+
+  .footer-top {
+    padding-top: 76px;
+    padding-bottom: 64px;
+    background: $brand-primary;
+  }
+}
+
+.footer-container {
+  margin-top: 30px;
+  padding-top: 38px;
+  overflow: hidden;
+  text-align: center;
+  li {
+    margin-bottom: 8px;
+  }
+  li a {
+    color: $gray;
+    cursor: pointer;
+    font-size: $font-size-sm;
+    &:hover {
+      color: $brand-primary;
+    }
+  }
+  .links-footer, .links {
+    ul {
+      margin-bottom: 0;
+      > li {
+        display: inline-block;
+        padding: 5px 8px;
+        font-weight: normal;
+        font-size: 14px;
+        a {
+          color: $brand-primary;
+          &:hover {
+            color: $gray-darker;
+          }
+        }
+      }
+    }
+  }
+  .jxwishlist-account {
+    padding: 5px 8px;
+    color: $brand-primary;
+    i {
+      display: none;
+    }
+    &:hover {
+      color: $gray-darker;
+    }
+  }
+
+  .bottom-footer {
+    background: $gray-dark;
+    min-height: 50px;
+    > p {
+      padding: 15px;
+      margin-bottom: 0;
+    }
+
+    a {
+      color: $gray;
+      &:hover {
+        color: $brand-primary;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .block_newsletter {
+    padding-bottom: 20px;
+  }
+  .footer-container {
+    box-shadow: none;
+    margin-top: 0;
+    text-align: center;
+    .wrapper:not(.links) {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .block-contact {
+    padding-left: 30px;
+  }
+}

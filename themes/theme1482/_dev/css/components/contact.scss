@@ -1,0 +1,39 @@
+.contact-rich {
+  color: $gray;
+  margin-bottom: 40px;
+  word-wrap: break-word;
+  h4 {
+    text-transform: uppercase;
+    color: $gray-darker;
+    margin-bottom: 40px;
+  }
+  .block {
+    height: auto;
+    overflow: hidden;
+    .icon {
+      float: left;
+      width: 60px;
+      i {
+        font-size: 40px;
+      }
+    }
+    .data {
+      color: $gray-darker;
+      font-size: $font-size-sm;
+      width: auto;
+      overflow: hidden;
+      &.email{
+        padding-top: 4px;
+      }
+    }
+  }
+}
+.contact-form {
+  background: white;
+  padding: 5px;
+  color: $gray;
+  width: 100%;
+  h3 {
+    color: $gray-darker;
+  }
+}

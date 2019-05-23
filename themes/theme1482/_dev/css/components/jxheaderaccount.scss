@@ -1,0 +1,417 @@
+/*
+* @package      Style for JX Header Account
+* @description  This section holds specific style redeclarations for
+*               JX Header Account
+*/
+
+#_desktop_user_info {
+  position: relative;
+  float: left;
+
+  div.current {
+    border-right: none;
+    a {
+      text-decoration: none;
+      color: $brand-primary;
+      &:hover {
+        color: $white;
+      }
+    }
+    &.active {
+      a {
+        color: $brand-primary;
+      }
+    }
+  }
+}
+
+.header-login-block,
+#_desktop_user_info {
+  .header-login-content {
+    text-align: left;
+    display: none;
+    position: absolute;
+    right: auto;
+    left: 0;
+    top: 100%;
+    z-index: 999;
+    #create_header_account_error {
+      padding: 8px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      right: 0;
+      left: auto;
+      max-width: 320px;
+      width: 100%;
+    }
+  }
+}
+
+
+
+/*
+* @section      Style for login wrapper
+* @description  This section holds specific style redeclarations for
+*               login content wrapper
+*/
+
+.header-login-content {
+  text-align: left;
+  padding: 25px 29px;
+  margin: 0;
+  color: $gray;
+  background: $white;
+  @include box-shadow;
+
+  @include media-breakpoint-up(lg) {
+    max-width: 542px;
+    padding: 40px;
+  }
+
+  p.products-section-title {
+    border-bottom: none;
+    color: $gray-darker;
+    padding-bottom: 0;
+  }
+  
+  li {
+    margin: 0 auto;
+    padding: 0;
+    &.user-data {
+      overflow: hidden;
+      img {
+        margin-bottom: 18px;
+        max-width: 150px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      p {
+        span {
+          display: block;
+          white-space: nowrap;
+        }
+      }
+    }
+    ul {
+      margin: 0 0 10px;
+      li {
+        display: block;
+        overflow: hidden;
+        a {
+          color: $gray-darker;
+          font-size: 16px;
+          line-height: 1.3;
+          font-weight: bold;
+          &:hover {
+            color: $brand-primary;
+          }
+          i {
+            display: none;
+          }
+        }
+      }
+    }
+    &.onecolumn {
+      min-width: 205px;
+      text-align: left;
+    }
+    &.twocolumns {
+      min-width: 405px;
+      @include media-breakpoint-down(sm) {
+        min-width: 260px;
+      }
+      text-align: left;
+      > ul {
+        width: 50%;
+        float: left;
+      }
+    }
+  }
+  
+  &:not(.is-logged) > li {
+    width: 230px;
+    @include media-breakpoint-up(lg) {
+      width: 346px;
+    }
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
+  .form-group {
+    margin-bottom: 5px;
+
+    .custom-checkbox {
+      display: flex;
+    }
+
+    .form-control {
+      color: $gray-darker;
+      height: 50px;
+    }
+
+    .input-group {
+      overflow: hidden;
+    }
+
+    .custom-checkbox label {
+      margin-bottom: 0;
+      margin-left: 3px;
+      br, em {
+        display: none;
+      }
+    }
+
+    .form-control-comment {
+      position: relative;
+      top: 5px;
+      padding-top: 2px;
+      color: $gray;
+    }
+
+    label {
+      &.form-control-label {
+        padding-top: 5px;
+      }
+      sup {
+        color: $gray;
+      }
+    }
+    input {
+      background-position: 98% 12px;
+    }
+    .form_info {
+      color: $gray;
+    }
+  }
+  p {
+    margin-bottom: 10px;
+    &.submit {
+      padding-top: 3px;
+    }
+    &.logout {
+      margin: 0;
+      overflow: hidden;
+      clear: both;
+    }
+    .forgot-password {
+      color: $gray-darker;
+      text-decoration: underline;
+      font-weight: 500;
+      &:hover {
+        color: $brand-primary;
+      }
+    }
+    .btn {
+      width: 100%;
+      max-width: 230px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+ 
+  .create-account-content {
+
+    .custom-radio {
+      margin-right: 7px;
+    }
+
+    label + label {
+      margin-left: 25px;
+    }
+
+    .row {
+      margin: 0 -3px;
+      > div {
+        padding: 0 3px;
+      }
+    }
+
+    > div, .form-group {
+      line-height: 1;
+    }
+
+    .social-login-buttons {
+      div {
+        margin-bottom: 15px;
+        &.one-element {
+          .btn {
+            margin-left: 0;
+            font-size: 12px;
+            line-height: 1.1;
+            span {
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  .forgot-password-content {
+    .signin {
+      i {
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+/*
+* @section      Style for social account
+*/
+
+.social-login-buttons {
+  margin: 0 -4px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  div {
+    padding: 0 4px;
+    margin-bottom: 17px;
+    .btn {
+      color: #fff;
+      min-height: auto;
+      span {
+        margin-left: 10px;
+      }
+      &:before {
+        display: inline-block;
+        font: normal 21px/1em 'Material Icons';
+      }
+      &.btn-login-facebook {
+        background-color: #3b5998;
+        border: 1px solid #294173;
+        box-shadow: inset 0 0 0 1px #6c91cf;
+        &:hover {
+          background-color: darken(#3b5998, 10);
+          border-color: darken(#294173, 10);
+          box-shadow: inset 0 0 0 1px darken(#6c91cf, 10);
+        }
+      }
+      &.btn-login-google {
+        background-color: #df4a32;
+        border: 1px solid #bf3822;
+        box-shadow: inset 0 0 0 1px #f58265;
+        &:hover {
+          background-color: darken(#df4a32, 10);
+          border-color: darken(#bf3822, 10);
+          box-shadow: inset 0 0 0 1px darken(#f58265, 10);
+        }
+      }
+      &.btn-login-vk {
+        background-color: #3383c1;
+        border: 1px solid #205ca0;
+        box-shadow: inset 0 0 0 1px #5eb0e2;
+        &:hover {
+          background-color: darken(#3383c1, 10);
+          border-color: darken(#205ca0, 10);
+          box-shadow: inset 0 0 0 1px darken(#5eb0e2, 10);
+        }
+      }
+    }
+  }
+}
+
+/*
+* @section      Style for left and right sidebars
+* @description  This section holds specific style redeclarations for
+*               left and right sidebars
+*/
+
+.jxha-sidebar-left, .jxha-sidebar-right {
+  background: #f7f7f7;
+  height: 100%;
+  position: fixed;
+  transition: all 0.3s ease;
+  top: 0;
+  z-index: 99999;
+  overflow: auto;
+  max-height: 100%;
+}
+
+.jxha-sidebar-left {
+  left: 0;
+  transform: translateX(-100%);
+}
+
+.jxha-sidebar-right {
+  right: 0;
+  transform: translateX(100%);
+  .jxha-close-btn {
+    right: auto;
+    left: 19px;
+  }
+}
+
+.jxha-sidebar-left.active {
+  left: 0;
+  transform: translateX(0);
+}
+
+.jxha-sidebar-right.active {
+  right: 0;
+  transform: translateX(0);
+}
+
+.jxha-close-btn {
+  position: absolute;
+  top: 15px;
+  right: 19px;
+  cursor: pointer;
+  display: block;
+  color: #b0b0b0;
+  outline: none !important;
+  transition: all 0.3s ease;
+  transform: scale(1);
+  &:before {
+    font: normal 18px/1.1 "FontAwesome";
+    content: '\f00d';
+  }
+  &:hover {
+    color: #333;
+  }
+}
+
+/*
+* @section      Style for left and right columns
+* @description  This section holds specific style redeclarations for
+*               left and right columns
+*/
+
+#columns {
+  .header-login-content {
+    padding: 20px;
+    li.user-data {
+      p span {
+        display: inline-block;
+      }
+      img {
+        float: none;
+      }
+    }
+    &:not(.is-logged) li {
+      width: 100%;
+    }
+  }
+  #center_column {
+    .social-login-buttons {
+      div {
+        .btn span {
+          @media (min-width: 992px) {
+            display: inline-block;
+            font-size: 13px;
+          }
+          @media (min-width: 1200px) {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.hidden {
+  display: none;
+}

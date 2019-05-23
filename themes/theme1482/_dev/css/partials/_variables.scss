@@ -1,0 +1,126 @@
+$gray-darker: #333333;
+$gray-dark: #474445;
+$gray: #787a88;
+$gray-light: #ebecee;
+$gray-lighter: #dedfe1;
+$gray-middle: #999999;
+$white: #ffffff;
+$brand-primary: #ffc107;
+$brand-secondary: #f39d72;
+$brand-success: #4cbb6c;
+$brand-warning: #ff9a52;
+$brand-danger: #ff4c4c;
+$border-color: #dadada;
+$label-color: $gray-darker;
+$btn-primary-color: $gray-dark;
+$btn-primary-bg: transparent;
+$btn-primary-border: $brand-primary;
+$btn-secondary-color: $white;
+$btn-secondary-bg: $gray-darker;
+$btn-secondary-border:  $gray-darker;
+$btn-border-radius: 0;
+$input-btn-border-width: 0.065rem;
+$input-border-color: $gray-light;
+$headings-font-weight: 700;
+$tooltip-bg: $brand-danger;
+$border-radius: 0;
+$extra-small-space: 4px;
+$small-space: 5px;
+$medium-space: 10px;
+$large-space: 15px;
+$extra-large-space: 25px;
+$warning: #FF9A52;
+$warning-hover: #FDE7BB;
+$alert-warning-bg: rgba(255,154,82,0.3);
+$alert-warning-border: $warning;
+$alert-warning-text: $gray-darker;
+$btn-warning-bg: $warning;
+$btn-warning-color: white;
+$btn-tertiary-color: #6C868E;
+$btn-tertiary-hover: #BBCDD2;
+$base-font-size: 14px;
+$font-size-lg: 0.9375rem;
+$font-size-sm: 0.875rem;
+$font-size-xs: 0.8125rem;
+$font-size-h1: 52px;
+$font-size-h2: 40px;
+$font-size-h3: 30px;
+$font-size-h4: 24px;
+$font-size-h5: 20px;
+$font-size-h6: 18px;
+$display1-size: 50px;
+$display1-weight: 600;
+$display2-size: 35px;
+$display2-weight: 400;
+$display3-size: 25px;
+$display3-weight: 400;
+$display4-size: 20px;
+$display4-weight: 400;
+$display5-weight: 900;
+$text-muted: $gray;
+
+
+//custom vars
+$font-family-base: 'Lato', Arial, sans-serif;
+$font-custom: 'Playfair Display', serif;
+$font-default: 400 14px/1.2 $font-family-base;
+
+$font-icon: "FontAwesome";
+
+
+$base-box-shadow: -2px 4px 20px 0px rgba(0, 0, 0, 0.2);
+$base-transition: all .3s ease;
+$main_border: 1px solid $gray-light;
+
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1848px
+) !default;
+
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1728px
+) !default;
+
+
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+$grid-columns:               12 !default;
+$grid-gutter-width-base:     30px !default;
+$grid-gutter-width-base-xxl:   60px !default;
+$grid-gutter-widths: (
+  xs: $grid-gutter-width-base,
+  sm: $grid-gutter-width-base,
+  md: $grid-gutter-width-base,
+  lg: $grid-gutter-width-base,
+  xl: $grid-gutter-width-base,
+  xxl: $grid-gutter-width-base-xxl
+) !default;
+
+
+

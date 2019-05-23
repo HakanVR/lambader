@@ -1,0 +1,54 @@
+.sitemap-title {
+  text-transform: capitalize;
+}
+
+
+.page-sitemap {
+  .page-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+}
+
+.sitemap {
+  margin-top: 20px;
+
+  h2 {
+    color: $gray-darker;
+    font-size: $display3-size;
+    font-weight: 600;
+    line-height: 1.2;
+    border-bottom: 1px solid $gray;
+    margin-left: -15px;
+    width: 100%;
+    height: 45px;
+    padding-bottom: 15px;
+  }
+
+  ul {
+    margin-left: -15px;
+    margin-top: 20px;
+
+    &.nested {
+      margin-left: 20px;
+    }
+
+    li {
+      font-size: 16px;
+      margin-bottom: 15px;
+      a {
+        color: $gray-darker;
+        font-weight: 500;
+        &:hover {
+          color: $brand-primary;
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(xs) {
+  .sitemap {
+    margin-top: 0;
+  }
+}

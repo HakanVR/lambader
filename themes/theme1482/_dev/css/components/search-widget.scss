@@ -1,0 +1,79 @@
+.search-widget {
+  form {
+    display: flex;
+    position: relative;
+    input[type=text] {
+      padding: 15px;
+      height: 55px;
+      color: $gray-darker;
+      border: $input-btn-border-width solid $input-border-color;
+      &:focus {
+        outline: 3px $brand-primary solid;
+        color: $gray-darker;
+        background: white;
+        + button .search {
+          color: $brand-primary;
+        }
+      }
+    }
+    button[type=submit] {
+      position: absolute;
+      background: none;
+      border: none;
+      top: 0;
+      right: 5px;
+      color: $gray-darker;
+      height: 100%;
+      font-size: 22px;
+      cursor: pointer;
+      .search:hover {
+        color: $brand-primary;
+      }
+      &:hover {
+        color: $brand-primary;
+      }
+    }
+  }
+}
+.header-top {
+  .search-widget {
+    form {
+      input[type="text"] {
+        min-width: inherit;
+        width: 100%;
+      }
+    }
+  }
+}
+#checkout {
+  #search_widget {
+    display: none; /* Not ideal solution by allows to reuse same hooks/templates */
+  }
+}
+
+#pagenotfound {
+  .page-content {
+    #search_widget {
+      width: 100%;
+      padding: 0;
+    }
+  }
+}
+
+
+/*** Responsive part ***/
+@include media-breakpoint-down(sm) {
+  .header-top {
+    .search-widget {
+      float: none;
+      padding: 0 20px;
+      form {
+        margin: 0 auto;
+        input[type="text"] {
+          min-width: inherit;
+          background: white;
+        }
+      }
+    }
+  }
+}
